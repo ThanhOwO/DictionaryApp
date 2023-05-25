@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dictionary"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edit_text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Search..."
+        android:inputType="text"
+        android:background="@drawable/bg"/>
+
+    <ListView
+        android:id="@+id/list_view_results"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/edit_text_search"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <LinearLayout
+        android:layout_below="@id/list_view_results"
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/button_save_internal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to Internal Storage" />
+
+        <Button
+            android:id="@+id/button_save_external"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to External Storage" />
+
+        <Button
+            android:id="@+id/button_copy_external"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy to External Storage" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
